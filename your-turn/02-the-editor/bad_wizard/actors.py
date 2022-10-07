@@ -18,6 +18,16 @@ class Creature:
 class Wizard(Creature):
 
     def attack(self, creature):
+        """
+        Attacks the given creature
+
+        Args:
+            creature (Creature): The creature to battle.
+
+        Returns:
+            bool: True if the wizard is triumphant.
+
+        """
         print("The wizard {} attacks {}!".format(
             self.name, creature.name
         ))
@@ -34,6 +44,10 @@ class Wizard(Creature):
         else:
             print("The wizard has been DEFEATED!!!")
             return False
+
+    def wakeup(self):
+        print(f"The hero {self.__class__} {self.name} wakes up")
+
 
 
 class SmallAnimal(Creature):
