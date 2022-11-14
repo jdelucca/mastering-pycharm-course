@@ -115,6 +115,9 @@ We can do double-duty for clean up here. It would be nice if we saw where these 
 See how that import is cleaned up and our usage is more clear with the namespace? For example, it's clear `download_data` and `get_show_id_range` come from the `service` module now:
 
 ```python
+import service
+
+
 def main():
     show_header()
     service.download_data('https://talkpython.fm/episodes/rss')
